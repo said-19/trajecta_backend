@@ -5,6 +5,7 @@ import {
   IsInt,
   IsOptional,
   IsString,
+  Max,
   Min,
   MinLength,
   ValidateNested,
@@ -99,6 +100,27 @@ export class UpdateSiteSettingsDto {
   @IsInt()
   @Min(0)
   statInstructors?: number;
+
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(0)
+  @Max(200)
+  marketYears?: number;
+
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(0)
+  @Max(999)
+  instructorCount?: number;
+
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(0)
+  @Max(100)
+  successRate?: number;
 
   @IsOptional()
   @IsString()

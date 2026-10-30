@@ -23,6 +23,9 @@ export type SiteSettingsView = {
   statYears: number;
   statHours: number;
   statInstructors: number;
+  marketYears: number;
+  instructorCount: number;
+  successRate: number;
   heroText: string;
   aboutText1: string;
   aboutText2: string;
@@ -65,6 +68,9 @@ const DEFAULT_SETTINGS = {
   statYears: 8,
   statHours: 18400,
   statInstructors: 12,
+  marketYears: 1,
+  instructorCount: 4,
+  successRate: 95,
   heroText:
     'Un accompagnement personnalisé pour réussir votre permis dans les meilleures conditions.',
   aboutText1:
@@ -78,6 +84,7 @@ const DEFAULT_SETTINGS = {
     'Climatisation',
     'Confort optimal',
     "Technologies d'aide à la conduite",
+    'Assistance personnalisée',
   ],
   questionText:
     'Vous avez une question sur le contenu de nos formations, sur nos tarifs ou sur nos horaires ? Besoin de conseils personnalisés en fonction de votre situation ? Vous avez des contraintes d’agenda ou souhaitez passer le permis rapidement ?',
@@ -113,6 +120,9 @@ export class SiteSettingsService implements OnModuleInit {
     statYears?: number;
     statHours?: number;
     statInstructors?: number;
+    marketYears?: number;
+    instructorCount?: number;
+    successRate?: number;
     heroText?: string;
     aboutText1?: string;
     aboutText2?: string;
@@ -147,6 +157,10 @@ export class SiteSettingsService implements OnModuleInit {
       statHours: settings.statHours ?? DEFAULT_SETTINGS.statHours,
       statInstructors:
         settings.statInstructors ?? DEFAULT_SETTINGS.statInstructors,
+      marketYears: settings.marketYears ?? DEFAULT_SETTINGS.marketYears,
+      instructorCount:
+        settings.instructorCount ?? DEFAULT_SETTINGS.instructorCount,
+      successRate: settings.successRate ?? DEFAULT_SETTINGS.successRate,
       heroText: text(settings.heroText, DEFAULT_SETTINGS.heroText),
       aboutText1: text(settings.aboutText1, DEFAULT_SETTINGS.aboutText1),
       aboutText2: text(settings.aboutText2, DEFAULT_SETTINGS.aboutText2),

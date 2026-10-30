@@ -66,6 +66,15 @@ export class SiteSettings {
   @Prop({ default: 12 })
   statInstructors: number;
 
+  @Prop({ default: 1 })
+  marketYears: number;
+
+  @Prop({ default: 4 })
+  instructorCount: number;
+
+  @Prop({ default: 95 })
+  successRate: number;
+
   @Prop({
     trim: true,
     default:
@@ -98,6 +107,7 @@ export class SiteSettings {
       'Climatisation',
       'Confort optimal',
       "Technologies d'aide à la conduite",
+      'Assistance personnalisée',
     ],
   })
   vehicleFeatures: string[];
